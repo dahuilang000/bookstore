@@ -20,8 +20,10 @@ entity Authors : cuid, managed {
                 on books.author = $self; // 一对多关系，一个作者拥有多本书
 }
 
+
 // 书籍的章节实体
 entity Chapters : cuid, managed {
         number : Integer;
     key book   : Association to Books; // 章节拥有书实体主键，父子关系实体
+    // test
 }
